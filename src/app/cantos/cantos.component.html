@@ -1,0 +1,22 @@
+
+<div class="container">
+    <div class="box">
+        <h2>Pieśni: </h2>
+
+        <ul class="cantos">
+            <li *ngFor="let canto of cantos" 
+            (click)="onSelect(canto)">
+            <span class="badge">{{canto.number}}</span> {{canto.cantoName}}
+            </li>
+        </ul>
+    </div>
+
+    <div class="box">
+        <h2>{{selectedCanto.cantoName | uppercase}} Details</h2>
+        <div><span>number: </span>{{selectedCanto.number}}</div>
+        <div>
+            {{selectedCanto.cantoName}}
+        </div>
+    </div>
+
+</div>
